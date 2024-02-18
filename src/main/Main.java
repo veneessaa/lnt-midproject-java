@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class Main {
 	
 	Scanner scan = new Scanner(System.in);
@@ -88,16 +87,10 @@ public class Main {
 		jabatanList.add(jabatan);
 		
 		if (jabatan.equals("Manager")){
-			gajiKaryawanList.add(8000000);
-			manager++;
 			gajiManager();
 		} else if (jabatan.equals("Supervisor")) {
-			gajiKaryawanList.add(6000000);
-			supervisor++;
 			gajiSupervisor();
 		} else {
-			gajiKaryawanList.add(4000000);
-			admin++;
 			gajiAdmin();
 		}
 		System.out.println("ENTER to return");
@@ -105,6 +98,8 @@ public class Main {
 	}
 	
 	void gajiManager() {
+		gajiKaryawanList.add(8000000);
+		manager++;
 		if ((manager - 1) % 3 == 0 && manager != 1) {
 			System.out.print("Bonus sebesar 10% telah diberikan kepada karyawan dengan id");
 			gajiUpdated = 0;
@@ -125,6 +120,8 @@ public class Main {
 	}
 	
 	void gajiSupervisor() {
+		gajiKaryawanList.add(6000000);
+		supervisor++;
 		if ((supervisor - 1) % 3 == 0 && supervisor != 1) {
 			System.out.print("Bonus sebesar 7.5% telah diberikan kepada karyawan dengan id");
 			gajiUpdated = 0;
@@ -145,6 +142,8 @@ public class Main {
 	}
 	
 	void gajiAdmin() {
+		gajiKaryawanList.add(4000000);
+		admin++;
 		if ((admin - 1) % 3 == 0 && admin != 1) {
 			System.out.print("Bonus sebesar 5% telah diberikan kepada karyawan dengan id");
 			gajiUpdated = 0;
@@ -243,36 +242,24 @@ public class Main {
 			manager--;
 			moveArrayList();
 			if (jabatanBaru.equals("Supervisor")) {
-				gajiKaryawanList.add(6000000);
-				supervisor++;
 				gajiSupervisor();
 			} else {
-				gajiKaryawanList.add(4000000);
-				admin++;
 				gajiAdmin();
 			}
 		} else if (jabatanList.get(updateNum - 1).equals("Supervisor") && !jabatanBaru.equals("Supervisor") && !jabatanBaru.equals("0")) {
 			supervisor--;
 			moveArrayList();
 			if (jabatanBaru.equals("Manager")){
-				gajiKaryawanList.add(8000000);
-				manager++;
 				gajiManager();
 			} else {
-				gajiKaryawanList.add(4000000);
-				admin++;
 				gajiAdmin();
 			}
 		} else if (jabatanList.get(updateNum - 1).equals("Admin") && !jabatanBaru.equals("Admin") && !jabatanBaru.equals("0")) {
 			admin--;
 			moveArrayList();
 			if (jabatanBaru.equals("Manager")){
-				gajiKaryawanList.add(8000000);
-				manager++;
 				gajiManager();
 			} else if (jabatanBaru.equals("Supervisor")) {
-				gajiKaryawanList.add(6000000);
-				supervisor++;
 				gajiSupervisor();
 			}
 		}
