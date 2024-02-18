@@ -170,20 +170,20 @@ public class Main {
 			for (int j = i; j < jabatanList.size(); j++) {
 				if (namaKaryawanList.get(i).compareTo(namaKaryawanList.get(j)) > 0) {
 					temp = namaKaryawanList.get(i);
-                    namaKaryawanList.set(i, namaKaryawanList.get(j));
-                    namaKaryawanList.set(j, temp);
-                    temp = kodeKaryawanList.get(i);
-                    kodeKaryawanList.set(i, kodeKaryawanList.get(j));
-                    kodeKaryawanList.set(j, temp);
-                    temp = jenisKelaminList.get(i);
-                    jenisKelaminList.set(i, jenisKelaminList.get(j));
-                    jenisKelaminList.set(j, temp);
-                    temp = jabatanList.get(i);
-                    jabatanList.set(i, jabatanList.get(j));
-                    jabatanList.set(j, temp);
-                    tempNum = gajiKaryawanList.get(i);
-                    gajiKaryawanList.set(i, gajiKaryawanList.get(j));
-                    gajiKaryawanList.set(j, tempNum);
+				   	namaKaryawanList.set(i, namaKaryawanList.get(j));
+					namaKaryawanList.set(j, temp);
+					temp = kodeKaryawanList.get(i);
+					kodeKaryawanList.set(i, kodeKaryawanList.get(j));
+					kodeKaryawanList.set(j, temp);
+					temp = jenisKelaminList.get(i);
+					jenisKelaminList.set(i, jenisKelaminList.get(j));
+					jenisKelaminList.set(j, temp);
+					temp = jabatanList.get(i);
+					jabatanList.set(i, jabatanList.get(j));
+					jabatanList.set(j, temp);
+					tempNum = gajiKaryawanList.get(i);
+					gajiKaryawanList.set(i, gajiKaryawanList.get(j));
+					gajiKaryawanList.set(j, tempNum);
 				}
 			}
 		}
